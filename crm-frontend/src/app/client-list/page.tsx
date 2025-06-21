@@ -48,7 +48,6 @@ export default function ClientList() {
                   </div>
                   <div className="ml-4 flex-shrink-0">
                     <User
-                      className="text-black rounded-full border-2 border-gray-300"
                       size={48}
                       className="sm:w-12 sm:h-12 lg:w-16 lg:h-16"
                     />
