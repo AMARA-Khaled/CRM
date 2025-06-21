@@ -1,3 +1,6 @@
+import Link from "next/link";
+
+
 export default function Login() {
   return (
     <>
@@ -93,6 +96,7 @@ export default function Login() {
                 required
               />
             </div>
+            <Link href={"/dashboard"}>
             <button
               className="text-white w-full font-bold py-2 px-4 rounded-2xl hover:scale-105 transition-transform duration-200 border-2 border-white/20 "
               type="submit"
@@ -100,6 +104,7 @@ export default function Login() {
             >
               Login
             </button>
+            </Link>
           </form>
         </div>
       </div>
