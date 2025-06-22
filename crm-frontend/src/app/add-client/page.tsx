@@ -16,7 +16,7 @@ const handleSubmission = () => {
 
 export default function AddClient() {
    const [isSubmitting, setIsSubmitting] = useState(false)
-   const [form, setForm] = useState({id: Clients.length + 1, firstName: "", lastName: "", email: "", phone: "", createdAt: "" });
+   const [form, setForm] = useState({id: Clients.length + 1, firstName: "", lastName: "", email: "", phone: "", createdAt: "", History: []});
    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       setForm({ ...form, [e.target.name]: e.target.value });
    };
@@ -32,7 +32,6 @@ export default function AddClient() {
       });
       setIsSubmitting(false)
       e.target.reset();
-      redirect('/add-client');
       handleSubmission()
    };
    return (
@@ -44,7 +43,7 @@ export default function AddClient() {
       >
          <Navbar x={2} />
 
-         <div className="max-w-md mx-auto mt-8">
+         <div className="max-w-md mx-auto sm:mt-8 -mt-5">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 shadow-xl">
                <h1 className="text-2xl font-bold text-white mb-6 text-center">Add New Client</h1>
                <h2 className="text-center text-gray-800" id="success"></h2>

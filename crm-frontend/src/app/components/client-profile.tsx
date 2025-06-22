@@ -53,6 +53,23 @@ export default function Profile({ id, show, onClose }: { id: number; show: boole
               <span className="font-semibold mr-3 text-sm sm:text-base flex-shrink-0">Address:</span>
               <span className="text-sm sm:text-base break-words min-w-0">{TheOne?.email}</span>
             </div>
+
+            <div className="flex items-start">
+              <span className="font-semibold mr-3 text-sm sm:text-base flex-shrink-0">History:</span>
+              {
+                  TheOne?.history && TheOne.history.length > 0 ? (
+                     <ul className="list-disc pl-5 text-sm sm:text-base">
+                     {TheOne.history.map((item, index) => (
+                        <li key={index} className="text-gray-700">
+                           {item.action} - <span className="text-gray-500">{item.date}</span>
+                        </li>
+                     ))}
+                     </ul>
+                  ) : (
+                     <span className="text-gray-500">No history available</span>
+                  )
+              }
+            </div>
           </div>
         </div>
       </div>

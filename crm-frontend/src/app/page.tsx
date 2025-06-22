@@ -9,8 +9,7 @@ import Add_client from "@/app/add-client/page";
 export default function Home() {
   return (
    <>
-   <Dashboard />
-    {/* <Login /> */}
+    <Login />
    </>
   );
 }
