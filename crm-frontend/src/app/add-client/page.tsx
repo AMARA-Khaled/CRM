@@ -2,7 +2,6 @@
 import { redirect } from "next/navigation"
 import Navbar from "@/app/components/Navbar"
 import { useState } from "react"
-import { set } from "mongoose"
 import Clients from "@/app/data/clients.json"
 
 const handleSubmission = () => {
